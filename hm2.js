@@ -1,14 +1,12 @@
 //отримуємо перше число
 let numberN = +prompt("Введіть ціле початкове число N:");
-while (!Number.isInteger(numberN)) {
+while (!Number.isInteger(numberN) || !numberN) {
   numberN = +prompt("Введене число повинне бути цілим. Введіть число ще раз:");
 }
 //отримуємо друге число
 let numberM = +prompt("Введіть друге ціле число M:");
-while (!Number.isInteger(numberM)) {
-  lastNumber = +prompt(
-    "Введене число повинне бути цілим. Введіть число ще раз:"
-  );
+while (!Number.isInteger(numberM) || !numberM) {
+  numberM = +prompt("Введене число повинне бути цілим. Введіть число ще раз:");
 }
 while (numberM < numberN) {
   numberM = +prompt(
