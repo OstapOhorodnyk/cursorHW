@@ -1,15 +1,8 @@
 //функція 1
 
-function getMaxDigit(...number) {
-  const string = String(number).split("");
-  let maxNumber = "";
-  for (let i of string) {
-    if (Number(i)) {
-      maxNumber += Number(i);
-    }
-  }
-  return Math.max(...maxNumber);
-}
+const getMaxDigit = (number) =>
+  Math.max(...Array.from(String(number)).map((item) => parseInt(item)));
+
 //функція 2
 const powNumber = (number, power) => {
   let result = number;
@@ -21,9 +14,8 @@ const powNumber = (number, power) => {
   return result;
 };
 //функція 3
-const formatName = (name) => {
-  const formatedName = name[0].toUpperCase() + name.substring(1).toLowerCase();
-  return formatedName;
+const formatName = (name) =>
+  (formatedName = name[0].toUpperCase() + name.substring(1).toLowerCase());
 };
 //функція 4
 const countClearProfit = function (salary, ...taxes) {
@@ -78,16 +70,7 @@ const getRandomPassword = (passwordNumber = 8) => {
 };
 //функція 9
 const deleteLetters = (deleteLetter, string) => {
-  let formatedString = "";
-
-  const splitedString = string.split("");
-  for (let letter of splitedString) {
-    if (letter !== deleteLetter) {
-      formatedString += letter;
-    }
-  }
-
-  return formatedString;
+  return string.replaceAll(deleteLetter, "");
 };
 //функція 10
 const isPalyndrom = (string) => {
