@@ -16,7 +16,7 @@ const powNumber = (number, power) => {
 //функція 3
 const formatName = (name) =>
   (formatedName = name[0].toUpperCase() + name.substring(1).toLowerCase());
-};
+
 //функція 4
 const countClearProfit = function (salary, ...taxes) {
   let totalTax = taxes.reduce((total, current) => total + current);
